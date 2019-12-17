@@ -1,8 +1,0 @@
-<application>
-  <component name="CodeInsightSettings">
-    <EXCLUDED_PACKAGE NAME="java.util.Optional" />
-    <EXCLUDED_PACKAGE NAME="java.util.stream" />
-    <EXCLUDED_PACKAGE NAME="org.jetbrains.annotations" />
-  </component>
-  <component name="DaemonCodeAnalyzerSettings" profile="UnifiedInspections" />
-</application>
