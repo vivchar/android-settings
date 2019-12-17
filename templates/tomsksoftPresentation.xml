@@ -1,0 +1,170 @@
+<templateSet group="tomsksoftPresentation">
+  <template name="newWidgetStateless" value="class $VAR$ extends StatelessWidget {&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Center(child: Text(&quot;hello world&quot;));&#10;  }&#10;}" description="Create StatelessWidget" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newWidgetStateful" value="class $VAR$ extends StatefulWidget {&#10;  @override&#10;  State&lt;StatefulWidget&gt; createState() {&#10;    return $VAR$State();&#10;  }&#10;}&#10;&#10;class $VAR$State extends State&lt;$VAR$&gt; {&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Text('Hello world!');&#10;  }&#10;}&#10;" description="Create StatelessWidget" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newListViewStatic" value="ListView(&#10;  children: &lt;Widget&gt;[&#10;    ListTile(&#10;      title: Text(&quot;Item&quot;),&#10;      subtitle: Text(&quot;subtitle&quot;),&#10;      trailing: Icon(Icons.keyboard_arrow_right),&#10;      leading: CircleAvatar(child: Icon(Icons.person),),&#10;    ),&#10;  ],&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newListViewDynamic" value="ListView.builder(&#10;  itemCount: $VAR1$,&#10;  itemBuilder: (context, position) {&#10;    return $VAR2$;&#10;  })" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VAR2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newListTile" value="ListTile(&#10;  title: Text(&quot;Item&quot;),&#10;  subtitle: Text(&quot;subtitle&quot;),&#10;  trailing: Icon(Icons.keyboard_arrow_right),&#10;  leading: CircleAvatar(child: Icon(Icons.person)),&#10;  onTap: () {},&#10;)" description="ListTile" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newItems" value="final List&lt;String&gt; items = List.generate(4, (i) =&gt; &quot;Item ${i + 1}&quot;);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+    </context>
+  </template>
+  <template name="newFabParam" value="floatingActionButton: FloatingActionButton(&#10;  child: Icon(Icons.add),&#10;  onPressed: () {},&#10;)," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newDismissable" value="Dismissible(&#10;  key: Key(item),&#10;  background: Container(color: Colors.red),&#10;  onDismissed: (direction) {},&#10;  child: $VAR2$,&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newAppBarParam" value="appBar: AppBar(&#10;  title: Text(&quot;TomskSoft&quot;),&#10;  centerTitle: true,&#10;  leading: Icon(Icons.people),&#10;  actions: &lt;Widget&gt;[&#10;    IconButton(&#10;      icon: Icon(Icons.settings),&#10;      onPressed: () {},&#10;    )&#10;  ],&#10;)," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newSecondScreen" value="class SecondRoute extends StatefulWidget {&#10;  @override&#10;  State&lt;StatefulWidget&gt; createState() {&#10;    return SecondRouteState();&#10;  }&#10;}&#10;&#10;class SecondRouteState extends State&lt;SecondRoute&gt; {&#10;  final controller = TextEditingController();&#10;&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return Scaffold(&#10;      appBar: AppBar(&#10;        title: Text(&quot;Enter a value&quot;),&#10;        actions: &lt;Widget&gt;[&#10;          IconButton(icon: Icon(Icons.done), onPressed: () {&#10;            Navigator.of(context).pop(controller.text);&#10;          },),&#10;        ],&#10;      ),&#10;      body: Padding(&#10;        padding: EdgeInsets.all(30),&#10;        child: Center(&#10;          child: Column(&#10;            children: &lt;Widget&gt;[&#10;              TextField(&#10;                decoration: InputDecoration(labelText: &quot;value&quot;),&#10;                controller: controller,&#10;              ),&#10;            ],&#10;          ),&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newInputDialog" value="&#10;  showDialog(&#10;        context: context,&#10;        builder: (context) {&#10;          var controller = TextEditingController();&#10;          return AlertDialog(&#10;            title: Text(&quot;Enter a value&quot;),&#10;            content: TextField(&#10;              controller: controller,&#10;            ),&#10;            actions: &lt;Widget&gt;[&#10;              FlatButton(&#10;                child: Text(&quot;ADD&quot;),&#10;                onPressed: () {&#10;                  Navigator.of(context).pop();&#10;                },&#10;              )&#10;            ],&#10;          );&#10;        });" description="input dialog" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newMaterialAppWidget" value="class MyApp extends StatelessWidget {&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return MaterialApp(&#10;      title: 'TomskSoft',&#10;      home: $VAR$,&#10;    );&#10;  }&#10;}" description="create a stub" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="DART_TOPLEVEL" value="true" />
+    </context>
+  </template>
+  <template name="newCenter" value="Center(child: Text(&quot;hello world&quot;),)," description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newText" value="Text('Hello world!')" description="Text Widget" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newTextTomskSoft" value="Text('TomskSoft')" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newIconButtonSettings" value="IconButton(&#10;  icon: Icon(Icons.settings),&#10;  onPressed: () {},&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newListViewEmpty" value="ListView(&#10;  children: &lt;Widget&gt;[],&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newItem" value="var item = items[position];" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newAddItem" value="onAddItem() {&#10;  items.add(&quot;Item ${items.length + 1}&quot;);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newRemoveItem" value="onRemoveItem(int position) {&#10;  setState(() {&#10;    items.removeAt(position);&#10;  });&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newDialogEmpty" value="showDialog(&#10;    context: context,&#10;    builder: (context) {&#10;      return AlertDialog();&#10;    });" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newTextEnterAValue" value="Text('Please enter a value')" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newButtonAdd" value="FlatButton(&#10;  child: Text(&quot;ADD&quot;),&#10;  onPressed: () {},&#10;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newNavigatorPop" value="Navigator.of(context).pop();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newTextController" value="var controller = TextEditingController();" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newNavigatorPush" value="Navigator.push(&#10;  context,&#10;  MaterialPageRoute(builder: (context) =&gt; SecondRoute()),&#10;);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="newConstructor" value="final String item;&#10;&#10;SecondRoute({Key key, @required this.item}) : super(key: key);" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newOpenSecondScreen" value="Future&lt;String&gt; openSecondPage(String item) async {&#10;  var name = await Navigator.push(&#10;    context,&#10;    MaterialPageRoute(builder: (context) =&gt; SecondRoute(item: item)),&#10;  );&#10;  return name;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newEditItem" value="void onEditItem(int position) {&#10;  var item = items[position];&#10;  openSecondPage(item);&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART" value="true" />
+      <option name="DART_STATEMENT" value="false" />
+      <option name="DART_TOPLEVEL" value="false" />
+    </context>
+  </template>
+  <template name="newTextThanks" value="Center(child: Text(&quot;Спасибо за внимание!&quot;, textAlign: TextAlign.center),)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="DART_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
