@@ -8,11 +8,14 @@
         <entry key="Android SDK" value="Stable Channel" />
       </map>
     </option>
+    <ignoredBuildNumbers>
+      <item value="191.8026.42.35.6010548" />
+    </ignoredBuildNumbers>
     <knownExternalComponentSources>
       <item value="Android SDK" />
     </knownExternalComponentSources>
-    <option name="LAST_BUILD_CHECKED" value="AI-191.8026.42.35.5791312" />
-    <option name="LAST_TIME_CHECKED" value="1576574172117" />
+    <option name="LAST_BUILD_CHECKED" value="AI-191.8026.42.35.5900203" />
+    <option name="LAST_TIME_CHECKED" value="1584621202933" />
     <option name="THIRD_PARTY_PLUGINS_ALLOWED" value="true" />
   </component>
 </application>
